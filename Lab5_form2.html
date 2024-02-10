@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 2px;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%; 
+}
+
+
+
+.container {
+  max-width: 650px;
+  width: 100%;
+  background: white;
+  margin: 50px auto;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.125);
+  padding: 30px;
+  border-radius: 1em;
+  border-width: 4px;
+  border-style: solid;
+  border-image: linear-gradient(to top left, #fe1e50 0%, #282881 100%) 1;
+}
+.container .form .inputfield {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.container .form .inputfield label {
+  width: 200px;
+  color: darkred;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+.container .form .inputfield .input{
+  width: 100%;
+  outline: none;
+  border: 1px solid #fe1e50;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.inputfield_terms{
+    display: flex;
+    position: relative;
+    margin-left: 150px;
+}
+    </style>
+</head>
+<body>
+    <div class="container"> 
+        <form>
+        <div class="form">
+        <h1>Payment</h1>
+        <hr>
+        <div class="inputfield">
+            <label>Card Holder's Name</label>
+            <input type="text" class="input" id="name" name="fname" placeholder="Enter card holder name" maxlength="30"
+              pattern="[A-Za-z]{1,32}" title="Enter only alphabets" required>
+        </div>
+        <div class="inputfield">
+            <label>Card Number</label>
+            <input type="number" class="input" id="name" name="cardnumber" placeholder="Enter card number" maxlength="16"
+              pattern="[0-9]{4} [0-9]{4} [0-9]{4} [0-9]{4}" title="Enter only number" required>
+        </div>
+        <div class="inputfield">
+            <label>Card Expiry Date</label>
+            <select>
+                <option value= 1 > JAN </option>
+                <option value= 2 > FEB </option>
+                <option value= 3 > MAR </option>
+                <option value= 4 > APR </option>
+                <option value= 5 > MAY </option>
+                <option value= 6 > JUNE </option>
+                <option value= 7 > JULY </option>
+                <option value= 8 > AUG </option>
+                <option value= 9 > SEP </option>
+                <option value= 10 > OCT </option>
+                <option value= 11 > NOV </option>
+                <option value= 12 > DEC </option>
+            </select>
+            <select>
+                <option value= 2013 > 2013 </option>
+                <option value= 2014 > 2014 </option>
+                <option value= 2015 > 2015 </option>
+                <option value= 2016 > 2016 </option>
+                <option value= 2017 > 2017 </option>
+                <option value= 2018 > 2018 </option>
+                <option value= 2019 > 2019 </option>
+                <option value= 2020 > 2020 </option>
+                <option value= 2021 > 2021 </option>
+                <option value= 2022 > 2022 </option>
+                <option value= 2023 > 2023 </option>
+                <option value= 2024 > 2024 </option>
+            </select>
+        </div>
+        <div class="inputfield">
+            <label>CVV</label>
+            <input type="number" class="input" id="name" name="cvv" placeholder="Enter cvv" maxlength="3"
+              pattern="[0-9]{3}$" title="Enter only number" required>
+        </div>
+    
+    <div class="inputfield_terms">
+        <label class="check">
+          <input type="checkbox" name="check" value="Declared" required>
+          <span class="checkmark"></span>
+        </label>
+        <p>Save card on file?</p>
+      </div>
+      <div class="inputfield_btns" id="btn">
+        <button type="submit" value="Register" class="btn">Pay now</button>
+      </div>
+    </div>
+    </form>
+    </div>
+</body>
+</html>
